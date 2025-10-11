@@ -33,7 +33,6 @@ class Player {
             case 2 -> this.choice = "small";
             default -> this.choice = "Invalid input";
         }
-        ;
     }
 
     public int getWallet() {
@@ -71,8 +70,6 @@ class House {
     private static final byte MAX_BIG = 17;
     private final Dice[] dices = new Dice[3];
     private int wallet;
-    ;
-
 
     public House(int wallet) {
         this.wallet = wallet;
@@ -98,10 +95,6 @@ class House {
             sum += dice.getValue();
         }
         return sum;
-    }
-
-    public Dice[] getDices() {
-        return this.dices;
     }
 
     public String checkDicesResult() {
