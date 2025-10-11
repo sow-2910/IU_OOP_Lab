@@ -3,8 +3,6 @@ package Question5;
 
 import java.util.Objects;
 import java.util.Scanner;
-
-import java.util.Arrays;
 import java.util.Random;
 
 class Player {
