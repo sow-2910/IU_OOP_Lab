@@ -104,62 +104,8 @@ class House {
     }
 
     public void printDices() {
-        System.out.printf("The dices are: %d %d %d\n", dices[0].getValue(), dices[1].getValue(), dices[2].getValue());
-//        String dice1 = """
-//                 +-------+
-//                 |       |
-//                 |   o   |
-//                 |       |
-//                 +-------+
-//                """;
-//        String dice2 = """
-//                 +-------+
-//                 |o      |
-//                 |       |
-//                 |      o|
-//                 +-------+
-//                """;
-//        String dice3 = """
-//                 +-------+
-//                 |o      |
-//                 |   o   |
-//                 |      o|
-//                 +-------+
-//                """;
-//        String dice4 = """
-//                 +-------+
-//                 |o     o|
-//                 |       |
-//                 |o     o|
-//                 +-------+
-//                """;
-//        String dice5 = """
-//                 +-------+
-//                 |o     o|
-//                 |   o   |
-//                 |o     o|
-//                 +-------+
-//                """;
-//        String dice6 = """
-//                 +-------+
-//                 |o     o|
-//                 |o     o|
-//                 |o     o|
-//                 +-------+
-//                """;
-//
-//
-//        for (int i = 0; i < dices.length; i++) {
-//            switch (dices[i].getValue()) {
-//                case 1 -> System.out.print(dice1);
-//                case 2 -> System.out.print(dice2);
-//                case 3 -> System.out.print(dice3);
-//                case 4 -> System.out.print(dice4);
-//                case 5 -> System.out.print(dice5);
-//                case 6 -> System.out.print(dice6);
-//                default -> System.out.print("Invalid input");
-//            }
-//        }
+        System.out.printf("The dices are: %d %d %d\n", dices[0].getValue(), dices[1].getValue(),
+                dices[2].getValue());
         final int num_lines = 5;
         String[][] Dices_array = new String[3][];
 
