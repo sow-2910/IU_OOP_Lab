@@ -114,7 +114,8 @@ class House {
         }
 
         for (int i = 0; i < num_lines; i++) {
-            System.out.printf("%s %s %s\n", Dices_array[0][i], Dices_array[1][i], Dices_array[2][i]);
+            System.out.printf("%s %s %s\n", Dices_array[0][i], Dices_array[1][i],
+                    Dices_array[2][i]);
         }
     }
 
