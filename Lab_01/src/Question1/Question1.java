@@ -24,28 +24,29 @@ class Rectangle {
     }
 
     public void visualize(int width, int height) {
-        for (int i = 0; i < this.height; i++) {
-            for (int j = 0; j < this.width; j++) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 System.out.print("*");
             }
+            System.out.println();
         }
 
+    }
+
+    public int getWidth() {
+        return this.width;
     }
 
     public void setWidth(int width) {
         this.width = width;
     }
 
-    public int getWidth() {
-        return width;
+    public int getHeight() {
+        return this.height;
     }
 
     public void setHeight(int height) {
         this.height = height;
-    }
-
-    public int getHeight() {
-        return height;
     }
 
 }
@@ -55,14 +56,10 @@ public class Question1 {
     public static void main(String[] args) {
         System.out.println("Test");
         Scanner scanner = new Scanner(System.in);
-
         for (int i = 0; i < 5; i++) {
-            System.out.print("Enter width: ");
-            int width = scanner.nextInt();
-            System.out.print("Enter height: ");
-            int height = scanner.nextInt();
-            Rectangle rectangle = new Rectangle(width, height);
-            rectangle.visualize(width, height);
+            System.out.println("Enter width and height: ");
+            Rectangle rect = new Rectangle(scanner.nextInt(), scanner.nextInt());
+            rect.visualize(rect.getWidth(), rect.getHeight());
         }
         scanner.close();
     }
