@@ -14,7 +14,7 @@ class Triangle {
     }
 
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public int getY() {
