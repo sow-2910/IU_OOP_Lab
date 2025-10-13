@@ -60,6 +60,55 @@ class Dice {
     public int getValue() {
         return this.value;
     }
+
+    public String[] get_img_dice() {
+        return switch (this.value) {
+            case 1 -> new String[]{
+                    "+-------+",
+                    "|       |",
+                    "|   ●   |",
+                    "|       |",
+                    "+-------+"};
+            case 2 -> new String[]{
+                    "+-------+",
+                    "| ●     |",
+                    "|       |",
+                    "|     ● |",
+                    "+-------+"
+            };
+            case 3 -> new String[]{
+                    "+-------+",
+                    "| ●     |",
+                    "|   ●   |",
+                    "|     ● |",
+                    "+-------+"
+            };
+            case 4 -> new String[]{
+                    "+-------+",
+                    "| ●   ● |",
+                    "|       |",
+                    "| ●   ● |",
+                    "+-------+"
+            };
+            case 5 -> new String[]{
+                    "+-------+",
+                    "| ●   ● |",
+                    "|   ●   |",
+                    "| ●   ● |",
+                    "+-------+"
+            };
+            case 6 -> new String[]{
+                    "+-------+",
+                    "| ●   ● |",
+                    "| ●   ● |",
+                    "| ●   ● |",
+                    "+-------+"
+            };
+            default -> new String[]{
+                    "| Lỗi! |"
+            };
+        };
+    }
 }
 
 
@@ -87,6 +136,71 @@ class House {
 
     public void printDices() {
         System.out.printf("The dices are: %d %d %d\n", dices[0].getValue(), dices[1].getValue(), dices[2].getValue());
+//        String dice1 = """
+//                 +-------+
+//                 |       |
+//                 |   o   |
+//                 |       |
+//                 +-------+
+//                """;
+//        String dice2 = """
+//                 +-------+
+//                 |o      |
+//                 |       |
+//                 |      o|
+//                 +-------+
+//                """;
+//        String dice3 = """
+//                 +-------+
+//                 |o      |
+//                 |   o   |
+//                 |      o|
+//                 +-------+
+//                """;
+//        String dice4 = """
+//                 +-------+
+//                 |o     o|
+//                 |       |
+//                 |o     o|
+//                 +-------+
+//                """;
+//        String dice5 = """
+//                 +-------+
+//                 |o     o|
+//                 |   o   |
+//                 |o     o|
+//                 +-------+
+//                """;
+//        String dice6 = """
+//                 +-------+
+//                 |o     o|
+//                 |o     o|
+//                 |o     o|
+//                 +-------+
+//                """;
+//
+//
+//        for (int i = 0; i < dices.length; i++) {
+//            switch (dices[i].getValue()) {
+//                case 1 -> System.out.print(dice1);
+//                case 2 -> System.out.print(dice2);
+//                case 3 -> System.out.print(dice3);
+//                case 4 -> System.out.print(dice4);
+//                case 5 -> System.out.print(dice5);
+//                case 6 -> System.out.print(dice6);
+//                default -> System.out.print("Invalid input");
+//            }
+//        }
+        final int num_lines = 5;
+        String[][] Dices_array = new String[3][];
+
+        for (int i = 0; i < dices.length; i++) {
+            Dices_array[i] = dices[i].get_img_dice();
+        }
+
+        for (int i = 0; i < num_lines; i++) {
+            System.out.printf("%s %s %s\n", Dices_array[0][i], Dices_array[1][i], Dices_array[2][i]);
+        }
     }
 
     public int sumDices() {
@@ -111,7 +225,7 @@ class House {
         if (sum >= MIN_BIG && sum <= MAX_BIG) {
             return "big";
         } else {
-            return "nothing";
+            return "";
         }
     }
 
@@ -173,7 +287,7 @@ public class Question5 {
 
                 System.out.printf("The house has %d\n", house_Wallet_Start.getWallet());
                 System.out.printf("The player has %d\n", player.getWallet());
-                if (player.getWallet() == 0) {
+                if (player.getWallet() <= 0) {
                     System.out.println("You are out of money! Bye!");
                     break;
                 }
