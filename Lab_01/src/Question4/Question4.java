@@ -5,8 +5,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class Order {
+    private final ArrayList<Item> items;
     private int ID;
-    private ArrayList<Item> items;
 
     public Order(int ID) {
         items = new ArrayList<>();
@@ -19,20 +19,19 @@ class Order {
         for (Item x : items) {
             sum += x.getPrice();
         }
-        double result = sum / items.size();
-        return result;
+        return sum / items.size();
     }
 
     public void addItem(Item item) {
         items.add(item);
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
     public int getID() {
         return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
 }
@@ -49,28 +48,28 @@ class Item {
         this.price = price;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
     public int getID() {
         return ID;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
 

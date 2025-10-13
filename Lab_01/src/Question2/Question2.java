@@ -18,11 +18,11 @@ class Triangle {
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public int getZ() {
-        return z;
+        return this.z;
     }
 
     public String verify(int x, int y, int z) {
@@ -48,6 +48,7 @@ public class Question2 {
         int y = scanner.nextInt();
         int z = scanner.nextInt();
         Triangle triangle = new Triangle(x, y, z);
+        System.out.printf("The sides of the triangle is: %d %d %d", triangle.getX(), triangle.getY(), triangle.getZ());
         System.out.println(triangle.verify(x, y, z));
         scanner.close();
     }
