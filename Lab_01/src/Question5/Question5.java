@@ -63,11 +63,9 @@ class Dice {
 
     public String[] get_img_dice() {
         return switch (this.value) {
-            case 1 -> new String[]{
-                    "+-------+",
-                    "|       |",
-                    "|   ●   |",
-                    "|       |",
+            case 1 -> new String[]{"+-------+", "|       |", "|   ●   |", "|       |",
+                    "+-------+"};
+            case 2 -> new String[]{"+-------+", "| ●     |", "|       |", "|     ● |",
                     "+-------+"};
             case 3 -> new String[]{"+-------+", "| ●     |", "|   ●   |", "|     ● |",
                     "+-------+"};
