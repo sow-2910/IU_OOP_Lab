@@ -21,6 +21,7 @@ class Player {
     public void setBet() {
         Scanner scanner = new Scanner(System.in);
         this.bet = scanner.nextInt();
+        scanner.close();
     }
 
     public String getChoice() {
