@@ -2,66 +2,6 @@ package question1;
 
 import java.util.Scanner;
 
-class Point2D {
-    private int x;
-    private int y;
-    Scanner scanner = new Scanner(System.in);
-
-    public Point2D() {
-        x = 0;
-        y = 0;
-    }
-
-    public Point2D(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public Point2D(Point2D p) {
-        this.x = p.x;
-        this.y = p.y;
-    }
-
-    public void input() {
-        System.out.println("Enter X: ");
-        int x = scanner.nextInt();
-        this.x = x;
-        System.out.println("Enter Y: ");
-        int y = scanner.nextInt();
-        this.y = y;
-    }
-
-    public String toString() {
-        return "(" + x + "," + y + ")";
-    }
-
-    public void move(int x, int y) {
-
-    }
-
-    public boolean isOrigin() {
-        if (x == 0 && y == 0)
-            return true;
-        else
-            return false;
-    }
-
-    public double distance(Point2D p) {
-        int dx = this.x - p.x;
-        int dy = this.y - p.y;
-        double result = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-        return result;
-    }
-
-    public static double distance(Point2D p1, Point2D p2) {
-        int dx = p1.x - p2.x;
-        int dy = p1.y - p2.y;
-        double result = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-        return result;
-    }
-
-}
-
 public class TestingPoint2D {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
