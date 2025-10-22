@@ -27,7 +27,6 @@ public class Point2D {
         this.x = scanner.nextInt();
         System.out.println("Enter Y: ");
         this.y = scanner.nextInt();
-        // Do not close scanner to avoid closing System.in
     }
 
     public String toString() {
