@@ -1,14 +1,14 @@
 package question7;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Random Shapes");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new RandomShapesPanel());
-        frame.setSize(500, 500);
-        frame.setLocationRelativeTo(null);
+        frame.setSize(600, 600);
+
+        frame.add(new drawArc());
         frame.setVisible(true);
     }
 }
