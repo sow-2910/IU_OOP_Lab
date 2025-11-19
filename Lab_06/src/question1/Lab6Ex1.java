@@ -1,11 +1,21 @@
+package question1;
+
 import java.util.Scanner;
 
 public class Lab6Ex1 {
 
     public static int getVolume(MyCuboid p1, MyCuboid p2) {
-        int lengthX = Math.abs(p1.getVertex1().getX() - p2.getVertex2().getX());
-        int lengthY = Math.abs(p1.getVertex1().getY() - p2.getVertex2().getY());
-        int lengthZ = Math.abs(p1.getVertex1().getZ() - p2.getVertex2().getZ());
+        int xminforVolume = Math.max(p1.getXmin(), p2.getXmin());
+        int xmaxforVolume = Math.min(p1.getXmax(), p2.getXmax());
+        int lengthX = Math.max(0, xmaxforVolume - xminforVolume);
+
+        int yminforVolume = Math.max(p1.getYmin(), p2.getYmin());
+        int ymaxforVolume = Math.min(p1.getYmax(), p2.getYmax());
+        int lengthY = Math.max(0, ymaxforVolume - yminforVolume);
+
+        int zminforVolume = Math.max(p1.getZmin(), p2.getZmin());
+        int zmaxforVolume = Math.min(p1.getZmax(), p2.getZmax());
+        int lengthZ = Math.max(0, zmaxforVolume - zminforVolume);
 
         return lengthX * lengthY * lengthZ;
     }

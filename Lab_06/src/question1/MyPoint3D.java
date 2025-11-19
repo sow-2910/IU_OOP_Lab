@@ -1,3 +1,5 @@
+package question1;
+
 public class MyPoint3D {
     private int x;
     private int y;
