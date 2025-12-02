@@ -1,0 +1,2 @@
+a) This breaks ISP since the class OldPrinter is forced is implements methods that it not use which are scan and fax, it function should only be printing
+b

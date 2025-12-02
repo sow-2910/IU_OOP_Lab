@@ -1,0 +1,1 @@
+This follows DIP since the high-level module(NotificationService) is now not rely on low-level module(Email service). So that the code is easier to maintain and easy to extends or modified when we want to create new methods, whether it is through email or SMS.

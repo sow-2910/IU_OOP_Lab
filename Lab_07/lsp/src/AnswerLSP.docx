@@ -1,0 +1,2 @@
+a) Penguin is a problem for LSP since the sub class is not substituable for the super class.
+b) A better design is that we should divide class Penguin into 2 different class, one class can name FlyingBird and the other class can be SwimmingBird, by this we can have the clas Penguin extends SwimmingBird
