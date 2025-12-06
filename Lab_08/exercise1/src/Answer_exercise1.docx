@@ -1,0 +1,9 @@
+a) The given code have 5 different responsibilities
+    1. First one is loading data from "database"
+    2. Calculate the statistics
+    3. Formating the report
+    4. Saving to file
+    5. Sending notification email to teacher.
+b) This class violate the Single Responsibilities Principle since just one class but have 5 different responsibilities.
+    Which makes it unstable and hard to extends as well as modified in the future.
+f) SRP is now respected since each class have their own Responsibilities, which will make the code more stable and easier to modified and extends in the future.

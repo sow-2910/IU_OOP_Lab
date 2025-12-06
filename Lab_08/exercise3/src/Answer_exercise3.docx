@@ -1,0 +1,2 @@
+a) The FixedTermAccount violates LSP because it throws an exception in the withdraw() method. This breaks the contract established by the parent BankAccount class. As a resuls, the child class cannot be safely subtituted for the parent class without causing the client code to crash.
+e) After modification the code is no longer violate LSP because now the child class is substituable for the parent class and no contract is being violate this time.

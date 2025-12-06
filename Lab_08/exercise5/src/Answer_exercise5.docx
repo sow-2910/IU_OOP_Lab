@@ -1,0 +1,2 @@
+a) This design violates the Dependency Inversion Principle(DIP) since high level module(CheckoutService) is depend on the low-level module(PaypalPayment). As a result, when we want to add another payment methods, we will need to open class CheckoutService and rewrite the code which is currently working well.
+f) This design respect DependencyInversion Principle(DIP) since high level module(CheckoutService) is no longer depend on low-level PaypalPayment. Instead both of them rely on Abstraction which is interface PaymentMethod

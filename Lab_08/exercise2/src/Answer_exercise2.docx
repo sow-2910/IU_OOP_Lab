@@ -1,0 +1,2 @@
+a) This design broke the OCP since everytime our program extends to more type of customer, we have to modified the original code which is already working well. This can lead to unexpected errors when the program extend.
+f) After modification the code respect OCP since if we want to add new userType. We no longer need to modify the original code that have already been working. Therefore, it respect OCP.

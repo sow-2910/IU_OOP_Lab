@@ -1,0 +1,2 @@
+a) Methods showImage and method playVideo are not relevant for LoginScreen, and this breaks Interface Segregation Principle because the clas LoginScreen is forced to implements methods that is not necessary since it won't use.
+d) New design respect Interface Segregation Principle since LoginScreen class is no longer forced to implements methods that it won't use. Instead it only implements methods that it needed from the correct interface
